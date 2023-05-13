@@ -1,0 +1,11 @@
+{
+  "name": "alto",
+  "version": "1.0.0",
+  "description": "Challenge code for Alto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kilisoria",
+  "license": "ISC"
+}
