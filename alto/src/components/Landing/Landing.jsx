@@ -24,32 +24,32 @@ const Landing = ({ posts }) => {
                     <div className='player-wrapper'>
                         <ReactPlayer
                             className='react-player'
-                            url={videoPost.videoURL}
+                            url={videoPost?.videoURL}
                             width='100%'
                             height='440px'
                         />
                     </div>
                 </Grid>
                 <Grid xs={4}>
-                    <p style={{ textAlign: 'justify' }}>{textPostFirst.details}</p>
+                    <p style={{ textAlign: 'justify' }}>{textPostFirst?.details}</p>
                 </Grid>
                 <Grid xs={4}>
-                    <img src={imagePostFirst.imageURL} width="100%" />
+                    <img src={imagePostFirst?.imageURL} width="100%" />
                 </Grid>
                 <Grid xs={4}>
-                    <p style={{ textAlign: 'justify' }}>{textPostSecond.details}</p>
+                    <p style={{ textAlign: 'justify' }}>{textPostSecond?.details}</p>
                 </Grid>
                 <Grid xs={3}>
-                    <p style={{ textAlign: 'justify' }}>{textPostThree.details}</p>
+                    <p style={{ textAlign: 'justify' }}>{textPostThree?.details}</p>
                 </Grid>
                 <Grid xs={3}>
-                    <img src={imagePostSecond.imageURL} width="100%" />
+                    <img src={imagePostSecond?.imageURL} width="100%" />
                 </Grid>
                 <Grid xs={3}>
-                    <img src={imagePostThree.imageURL} width="100%" />
+                    <img src={imagePostThree?.imageURL} width="100%" />
                 </Grid>
                 <Grid xs={3}>
-                    <img src={imagePostFour.imageURL} width="100%" />
+                    <img src={imagePostFour?.imageURL} width="100%" />
                 </Grid>
                 
             </Grid>

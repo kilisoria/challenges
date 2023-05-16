@@ -19,7 +19,7 @@ const About = ({ }) => {
                 src="/avatar.jpg"
                 sx={{ width: 60, height: 60 }}
             />
-            <div>
+            <div id="details">
                 <p style={{ textAlign: 'justify', padding: '0 10px' }}>
                     I'm Cristian Soria, a Software Engineer. I've worked in the industry of Software for around 15 years. I've participated in many projects with different challenges and areas, including Health, Construction, Services, Finances, etc. Making Web, desktop, and mobile applications.
                     I have two daughters, and my wife, they are the core of my life.
