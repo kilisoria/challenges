@@ -1,23 +1,35 @@
 
 
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
+import {
+  RouterProvider,
+} from "react-router-dom";
+
+import AppContext from "./AppContext.jsx";
+
+import router from './routes';
+
+import { loadPosts } from './services/postService';
+
+import Header from './components/Header';
+
+import { TABS } from './common/constants';
+
 function App() {
+  const [tabSelectedValue, setTabSelectedValue] = useState(TABS.HOME);
+
+  useEffect(() => {
+    loadPosts();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to the code challenge by Cristian Soria
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Enter
-        </a>
-      </header>
+      <AppContext.Provider value={{ tabSelected: tabSelectedValue, setTabSelectedValue }}>
+        <Header />
+        <RouterProvider router={router} />
+      </AppContext.Provider>
     </div>
   );
 }
