@@ -11,10 +11,10 @@ const HeaderTabs = ({ tabSelected }) => {
   return (
     <TabList>
       <HeaderLinkTab label="Home" value="1" href="/" />
-      <HeaderLinkTab label="About" value="2" href="about" />
-      <HeaderLinkTab label="Contact" value="3" href="contact" />
+      <HeaderLinkTab label="About" value="2" href="/about" />
+      <HeaderLinkTab label="Contact" value="3" href="/contact" />
       {tabSelected === TABS.POSTS &&
-            <HeaderLinkTab label="Posts" value="4" href="posts" />
+            <HeaderLinkTab label="Posts" value="4" href="/posts" />
       }
     </TabList>
   );

@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
-
+import React, { useContext, useEffect, useState } from 'react';
 import CreateIcon from '@mui/icons-material/Create';
 
 import {
@@ -32,8 +31,8 @@ const Header = ({ }) => {
       return;
     }
 
-    window.location.replace(`/post/${post.id}/view`);
-  }
+    window.location.replace(`post/${post.id}/view`);
+  } 
 
   if (posts.length <= 0) {
     return null;
