@@ -25,7 +25,7 @@ const POSTS = [
         title: 'React interview',
         details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMake",
         videoURL: VIDEO_DEFAULT,
-        imageURL: 'https://www.hmablogs.com/wp-content/uploads/2021/12/How-to-run-Javascript-program-visual-studio-code.png',
+        imageURL: 'https://img.freepik.com/free-vector/hand-drawn-english-book-background_23-2149483336.jpg',
         createdAt: '2023-05-01T20:38:22.793Z',
     },
     {
@@ -139,6 +139,7 @@ const getPostById = postId => {
 const getPostByTitle = postTitle => {
     let posts = localStorage.getItem(POSTS_KEY);
     posts = JSON.parse(posts);
+    
     if (!posts || posts === null) {
         return;
     }

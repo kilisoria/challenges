@@ -7,22 +7,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import useInitPosts from './hooks/useInitPosts';
+
 import AppContext from "./AppContext.jsx";
 
 import router from './routes';
-
-import { loadPosts } from './services/postService';
 
 import Header from './components/Header';
 
 import { TABS } from './common/constants';
 
 function App() {
+  useInitPosts();
   const [tabSelectedValue, setTabSelectedValue] = useState(TABS.HOME);
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
 
   return (
     <div className="App">

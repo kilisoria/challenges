@@ -1,16 +1,19 @@
 import React, { useEffect, useContext } from 'react'
 
+import usePosts from '../../../hooks/usePosts';
+
 import AppContext from '../../../AppContext';
 
 import Post from '../../../components/Posts/Post';
 
 import { useNavigate } from "react-router-dom";
 
-import { addPost } from '../../../services/postService';
+
 
 import { TABS } from '../../../common/constants';
 
 const PostPage = ({ }) => {
+    const { addPost } = usePosts();
     const appContextValue = useContext(AppContext);
     const navigate = useNavigate();
 

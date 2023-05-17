@@ -6,32 +6,21 @@ import {
   Tooltip
 } from '@mui/material';
 
+import usePosts from '../../hooks/usePosts';
+
 import TabContext from '@mui/lab/TabContext';
 
 import AppContext from '../../AppContext';
 import HeaderTabs from './HeaderTabs';
 import HeaderSearch from './HeaderSearch';
 
-import { getPosts, getPostByTitle } from '../../services/postService';
-
 const Header = ({ }) => {
-  const [posts, setPosts] = useState([]);
+  const { posts, redirectToPostView } = usePosts();
   const appContextValue = useContext(AppContext);
   const { tabSelected } = appContextValue;
 
-  useEffect(() => {
-     setPosts(getPosts());
-  }, [])
-
   const handleSelect = (title) => {
-    const post = getPostByTitle(title);
-
-    if (!post) {
-      // TODO: Shows an error message.
-      return;
-    }
-
-    window.location.replace(`post/${post.id}/view`);
+    redirectToPostView(title);
   } 
 
   if (posts.length <= 0) {

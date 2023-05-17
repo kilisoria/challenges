@@ -1,21 +1,14 @@
-import React, { useEffect, useContext, useState } from 'react'
+import React, { useEffect, useContext } from 'react'
+import usePosts from '../../hooks/usePosts';
 
 import AppContext from '../../AppContext';
 
 import Landing from '../../components/Landing';
 
-import { getPostsSelected } from '../../services/postService';
-
 import { TABS } from '../../common/constants';
 
 const HomePage = ({ }) => {
-    const [postsSelected, setPostsSelected] = useState([]);
-    
-    useEffect(() => {
-        const posts = getPostsSelected();
-        setPostsSelected(posts);
-    }, []);
-
+    const { postsSelected } = usePosts();
     const appContextValue = useContext(AppContext);
 
     useEffect(() => {

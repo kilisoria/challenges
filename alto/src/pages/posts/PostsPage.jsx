@@ -1,22 +1,20 @@
-import React, { useContext, useEffect, useMemo } from 'react'
+import React, { useContext, useEffect } from 'react'
+
+import usePosts from '../../hooks/usePosts';
 
 import AppContext from '../../AppContext';
 
 import Posts from '../../components/Posts';
-import { getPosts } from '../../services/postService';
 
 import { TABS } from '../../common/constants';
 
 const PostsPage = ({ }) => {
     const appContextValue = useContext(AppContext);
+    const { posts } = usePosts();
 
     useEffect(() => {
         appContextValue.setTabSelectedValue(TABS.POSTS);
     }, [])
-
-    const posts = useMemo(() => {
-        return getPosts();
-    }, []);
 
     if (!posts || posts.length === 0) {
         return null;
