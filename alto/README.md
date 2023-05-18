@@ -1,3 +1,9 @@
+# Challenge
+
+https://docs.google.com/document/d/1CUwRaJQuCD6_Kb1TeNZK26bYA79OS0ThgjFO3z2N-Oc/edit
+
+JD > https://app.goalto.io/position/JSDeveloper
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
