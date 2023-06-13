@@ -7,11 +7,10 @@ function expandedForm(num) {
 
     for (let index = 0; index < numLength; index++) {
         zeroAmount = '0'.repeat((numLength - index) - 1);
-        console.log(zeroAmount)
         expandedValue += `${numStr.at(index)}${zeroAmount} `;
     }
 
-    console.log(expandedValue);
+    return expandedValue;
 }
 
 

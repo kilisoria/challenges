@@ -14,7 +14,6 @@ const isPalindrome = number => {
     }
 
     const numbeReversed = number.toString().split("").reverse().join('');
-    console.log(numbeReversed);
 
     return number === Number(numbeReversed);
 };
