@@ -5,9 +5,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
 
-// console.log(find_triplet(array,int)) // [ 10, 22, 3 ]
-// console.log(find_triplet(array,int)) // null
-
 const find_triplet = (array, sumToCheck) => {
     array.sort((a,b) => a - b);
     const arrayLength = array.length; 
